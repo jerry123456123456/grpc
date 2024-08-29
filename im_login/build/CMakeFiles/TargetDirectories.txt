@@ -1,5 +1,0 @@
-/home/jerry/snap/grpc/examples/cpp/im_login/build/CMakeFiles/im_grpc_proto.dir
-/home/jerry/snap/grpc/examples/cpp/im_login/build/CMakeFiles/client.dir
-/home/jerry/snap/grpc/examples/cpp/im_login/build/CMakeFiles/server.dir
-/home/jerry/snap/grpc/examples/cpp/im_login/build/CMakeFiles/edit_cache.dir
-/home/jerry/snap/grpc/examples/cpp/im_login/build/CMakeFiles/rebuild_cache.dir
