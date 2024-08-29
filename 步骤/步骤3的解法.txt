@@ -1,0 +1,49 @@
+要解决这个问题，您需要确保 `protoc-gen-grpc` 插件可执行并位于正确的路径中。以下是您可以尝试的解决方法：
+
+1. **确认插件路径**：
+
+   - 确保 `protoc-gen-grpc` 插件位于指定的路径 `/usr/local/bin/grpc_cpp_plugin` 中。您可以通过以下命令检查文件是否存在和是否可执行：
+
+     
+
+bash
+Copy code
+
+     ls -l /usr/local/bin/grpc_cpp_plugin
+     
+   - 如果文件不存在或者不可执行，您可能需要重新安装或者调整插件的权限。
+
+2. **指定绝对路径**：
+
+   - 在您的命令中，使用插件的绝对路径来确保 `protoc` 可以正确找到并执行插件。您可以将命令修改为：
+
+     
+
+bash
+Copy code
+
+     protoc --cpp_out=. --grpc_out=. --plugin=protoc-gen-grpc=/usr/local/bin/grpc_cpp_plugin IM.Login.proto
+     
+3. **检查插件的权限**：
+
+   - 确保 `protoc-gen-grpc` 插件具有执行权限。您可以使用以下命令添加执行权限：
+
+     
+
+bash
+Copy code
+
+     chmod +x /usr/local/bin/grpc_cpp_plugin
+     
+4. **重新运行命令**：
+
+   - 在确认插件路径和权限设置正确后，重新运行您的命令以生成 gRPC 相关的代码：
+
+     
+
+bash
+Copy code
+
+     protoc --cpp_out=. --grpc_out=. --plugin=protoc-gen-grpc=/usr/local/bin/grpc_cpp_plugin IM.Login.proto
+     
+通过按照上述步骤来检查插件路径、设置权限并重新运行命令，您应该能够成功生成 gRPC 相关的代码。如果您遇到任何问题或需要进一步协助，请随时告诉我。
